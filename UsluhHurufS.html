@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>41 Uslub — Luxury Mutholaah & Ngelalar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#070708;
+    --bg2:#0d0d10;
+    --card:#131316;
+    --card2:#19191d;
+    --gold:#d6b76a;
+    --gold2:#f6e7b6;
+    --white:#f7f5ef;
+    --muted:#9999a3;
+    --border:#29292e;
+    --green:#77e69a;
+    --red:#ff8585;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+        radial-gradient(circle at 15% 0%,rgba(214,183,106,.10),transparent 28%),
+        radial-gradient(circle at 85% 20%,rgba(214,183,106,.06),transparent 25%),
+        var(--bg);
+    color:var(--white);
+    font-family:'Plus Jakarta Sans',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:
+        linear-gradient(90deg,transparent 49.8%,rgba(255,255,255,.012) 50%,transparent 50.2%);
+    opacity:.4;
+}
+
+.ar{
+    font-family:'Amiri',serif;
+    direction:rtl;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    padding:16px 6vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    background:rgba(7,7,8,.82);
+    backdrop-filter:blur(22px);
+    border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.logo{
+    font-size:17px;
+    font-weight:800;
+    letter-spacing:-.03em;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.badge{
+    padding:7px 14px;
+    border:1px solid rgba(214,183,106,.25);
+    border-radius:100px;
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:.12em;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    width:min(1200px,88vw);
+    margin:auto;
+    padding:70px 0 45px;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:50px;
+    align-items:center;
+}
+
+@media(max-width:850px){
+    .hero{
+        grid-template-columns:1fr;
+        padding-top:45px;
+    }
+}
+
+.kicker{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+
+.hero h1{
+    font-size:clamp(45px,7vw,82px);
+    line-height:.9;
+    letter-spacing:-.065em;
+    font-weight:800;
+}
+
+.hero h1 span{
+    color:var(--gold);
+    font-family:'Amiri',serif;
+    font-weight:400;
+}
+
+.hero p{
+    color:var(--muted);
+    max-width:570px;
+    margin-top:22px;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.stats{
+    display:flex;
+    gap:12px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+.stat{
+    min-width:105px;
+    padding:15px 17px;
+    background:rgba(255,255,255,.025);
+    border:1px solid var(--border);
+    border-radius:17px;
+}
+
+.stat strong{
+    display:block;
+    font-size:23px;
+}
+
+.stat small{
+    color:var(--muted);
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+}
+
+/* HERO CARD */
+
+.heroCard{
+    position:relative;
+    background:
+        linear-gradient(145deg,#1b1b1e,#0d0d0f);
+    border:1px solid var(--border);
+    border-radius:30px;
+    padding:25px;
+    overflow:hidden;
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+.heroCard:before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    top:-160px;
+    right:-100px;
+    border-radius:50%;
+    background:rgba(214,183,106,.16);
+    filter:blur(50px);
+}
+
+.goldLine{
+    height:1px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    margin:20px 0;
+    opacity:.5;
+}
+
+.previewTitle{
+    font-size:10px;
+    color:var(--muted);
+    letter-spacing:.16em;
+}
+
+.preview{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:15px;
+}
+
+.previewItem{
+    background:#17171a;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:14px;
+}
+
+.previewItem .arab{
+    color:var(--gold2);
+    font-size:23px;
+    text-align:right;
+}
+
+.previewItem .indo{
+    color:var(--muted);
+    font-size:10px;
+    margin-top:6px;
+}
+
+/* ================= NAV ================= */
+
+.nav{
+    width:min(1200px,88vw);
+    margin:auto;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.nav button{
+    border:1px solid var(--border);
+    background:var(--card);
+    color:var(--muted);
+    padding:12px 20px;
+    border-radius:100px;
+    font-size:12px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.nav button:hover{
+    border-color:var(--gold);
+    color:var(--gold);
+}
+
+.nav button.active{
+    background:var(--white);
+    color:#080808;
+    border-color:var(--white);
+}
+
+/* ================= CONTENT ================= */
+
+.content{
+    width:min(1200px,88vw);
+    margin:auto;
+    padding:25px 0 100px;
+}
+
+.panel{
+    display:none;
+}
+
+.panel.active{
+    display:block;
+    animation:fade .35s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= SECTION TITLE ================= */
+
+.sectionHead{
+    margin:15px 0 25px;
+}
+
+.sectionHead small{
+    color:var(--gold);
+    letter-spacing:.18em;
+    font-size:10px;
+    text-transform:uppercase;
+}
+
+.sectionHead h2{
+    font-size:32px;
+    margin-top:6px;
+    letter-spacing:-.04em;
+}
+
+.sectionHead p{
+    color:var(--muted);
+    font-size:12px;
+    margin-top:8px;
+}
+
+/* ================= QUIZ ================= */
+
+.quiz{
+    max-width:750px;
+    margin:auto;
+}
+
+.quizCard{
+    background:
+        linear-gradient(145deg,#17171a,#0e0e10);
+    border:1px solid var(--border);
+    border-radius:30px;
+    padding:28px;
+    box-shadow:0 25px 70px rgba(0,0,0,.3);
+    position:relative;
+    overflow:hidden;
+}
+
+.quizCard:before{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:250px;
+    top:-170px;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(214,183,106,.13);
+    filter:blur(55px);
+}
+
+.progress{
+    height:5px;
+    border-radius:100px;
+    background:#29292d;
+    overflow:hidden;
+}
+
+.progressBar{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,var(--gold),var(--gold2));
+    transition:.4s;
+}
+
+.quizTop{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    margin-top:14px;
+    font-size:10px;
+    color:var(--muted);
+}
+
+.questionArea{
+    position:relative;
+    text-align:center;
+    padding:35px 10px 15px;
+}
+
+.questionNumber{
+    display:inline-block;
+    color:var(--gold);
+    border:1px solid rgba(214,183,106,.3);
+    border-radius:100px;
+    padding:5px 12px;
+    font-size:9px;
+    letter-spacing:.15em;
+}
+
+.question{
+    font-size:34px;
+    font-weight:800;
+    line-height:1.25;
+    margin-top:18px;
+}
+
+.question.ar{
+    font-size:44px;
+    color:var(--gold2);
+}
+
+.questionHint{
+    color:var(--muted);
+    font-size:12px;
+    margin-top:10px;
+}
+
+/* ANSWER */
+
+.answerArea{
+    display:none;
+    margin-top:20px;
+    text-align:center;
+    padding:20px;
+    background:#111114;
+    border:1px solid rgba(214,183,106,.25);
+    border-radius:20px;
+    animation:answerIn .4s ease;
+}
+
+.answerArea.show{
+    display:block;
+}
+
+@keyframes answerIn{
+    from{
+        opacity:0;
+        transform:scale(.97);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.answerLabel{
+    color:var(--muted);
+    font-size:9px;
+    letter-spacing:.15em;
+}
+
+.answerArabic{
+    color:var(--gold2);
+    font-family:'Amiri',serif;
+    direction:rtl;
+    font-size:38px;
+    margin-top:8px;
+}
+
+.answerIndo{
+    font-weight:800;
+    font-size:17px;
+    margin-top:4px;
+}
+
+.example{
+    margin-top:15px;
+    padding:13px;
+    background:var(--card2);
+    border-radius:13px;
+    border:1px solid var(--border);
+}
+
+.exampleArabic{
+    font-family:'Amiri',serif;
+    direction:rtl;
+    color:var(--gold2);
+    font-size:22px;
+}
+
+.exampleIndo{
+    color:var(--muted);
+    font-size:11px;
+    margin-top:5px;
+}
+
+/* PHOTO */
+
+.reaction{
+    display:none;
+    margin:16px auto 2px;
+    text-align:center;
+}
+
+.reaction.show{
+    display:block;
+    animation:reactionIn .4s ease;
+}
+
+@keyframes reactionIn{
+    from{
+        opacity:0;
+        transform:translateY(10px) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.reaction img{
+    width:105px;
+    height:105px;
+    object-fit:cover;
+    border-radius:18px;
+    border:2px solid rgba(214,183,106,.5);
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.reactionText{
+    color:var(--gold);
+    font-size:10px;
+    margin-top:6px;
+    font-weight:700;
+}
+
+/* BUTTON */
+
+.btn{
+    width:100%;
+    border:0;
+    border-radius:15px;
+    padding:14px;
+    margin-top:11px;
+    font-size:12px;
+    font-weight:800;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-1px);
+}
+
+.btnGold{
+    background:linear-gradient(100deg,var(--gold),var(--gold2));
+    color:#090909;
+}
+
+.btnDark{
+    background:transparent;
+    color:var(--white);
+    border:1px solid var(--border);
+}
+
+.btnGreen{
+    background:#102819;
+    color:var(--green);
+    border:1px solid #245d35;
+}
+
+.btnRed{
+    background:#291313;
+    color:var(--red);
+    border:1px solid #6b2929;
+}
+
+.buttonRow{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+@media(max-width:500px){
+    .buttonRow{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        font-size:27px;
+    }
+
+    .question.ar{
+        font-size:35px;
+    }
+}
+
+/* ================= MUTHOLAAH ================= */
+
+.search{
+    width:100%;
+    padding:16px 18px;
+    background:var(--card);
+    border:1px solid var(--border);
+    color:var(--white);
+    border-radius:15px;
+    outline:none;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.search:focus{
+    border-color:var(--gold);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    gap:13px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:18px;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    border-color:rgba(214,183,106,.4);
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.cardHead{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.number{
+    color:var(--gold);
+    font-size:10px;
+    border:1px solid rgba(214,183,106,.25);
+    padding:4px 9px;
+    border-radius:100px;
+}
+
+.cardTitle{
+    font-weight:800;
+    font-size:14px;
+    text-align:right;
+}
+
+.cardArabic{
+    font-family:'Amiri',serif;
+    color:var(--gold2);
+    direction:rtl;
+    text-align:right;
+    font-size:29px;
+    margin-top:12px;
+}
+
+.cardExample{
+    margin-top:14px;
+    background:var(--card2);
+    border-radius:13px;
+    padding:12px;
+    border:1px solid var(--border);
+}
+
+.cardExampleArabic{
+    font-family:'Amiri',serif;
+    direction:rtl;
+    text-align:right;
+    color:var(--gold2);
+    font-size:19px;
+    line-height:1.6;
+}
+
+.cardExampleIndo{
+    color:var(--muted);
+    font-size:11px;
+    line-height:1.6;
+    margin-top:5px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    text-align:center;
+    padding:30px 20px;
+    color:#5e5e65;
+    font-size:10px;
+    letter-spacing:.1em;
+}
+
+.gold{
+    color:var(--gold);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+        41 USLUB <span>◆</span> LUXURY
+    </div>
+
+    <div class="badge">
+        MUTHOLAAH • NGELALAR
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div>
+
+        <div class="kicker">
+            Arabic Memorization System
+        </div>
+
+        <h1>
+            41 Uslub<br>
+            <span>Premium</span>
+        </h1>
+
+        <p>
+            Tempat mutholaah dan ngelalar 41 uslub Bahasa Arab.
+            Pelajari satu per satu, uji hafalan, lihat jawaban hanya
+            ketika diperlukan, dan pantau perkembangan hafalanmu.
+        </p>
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>41</strong>
+                <small>Uslub</small>
+            </div>
+
+            <div class="stat">
+                <strong id="hafalStat">0</strong>
+                <small>Hafal</small>
+            </div>
+
+            <div class="stat">
+                <strong id="salahStat">0</strong>
+                <small>Belum Hafal</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="heroCard">
+
+        <div class="previewTitle">
+            PREMIUM PREVIEW
+        </div>
+
+        <div class="goldLine"></div>
+
+        <div class="preview" id="preview"></div>
+
+        <div style="
+            color:#777780;
+            font-size:10px;
+            text-align:center;
+            margin-top:16px;
+        ">
+            41 uslub • 41 mutholaah • 41 latihan
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="nav">
+
+    <button class="active" data-page="quizPage">
+        ✦ NGELALAR
+    </button>
+
+    <button data-page="mutholaahPage">
+        ◈ MUTHOLAAH 41
+    </button>
+
+</nav>
+
+
+<!-- ================= CONTENT ================= -->
+
+<main class="content">
+
+
+<!-- ================= QUIZ PAGE ================= -->
+
+<section id="quizPage" class="panel active">
+
+    <div class="sectionHead">
+
+        <small>01 — LATIHAN HAFALAN</small>
+
+        <h2>Ngelalar 41 Uslub</h2>
+
+        <p>
+            Jawab dalam hati terlebih dahulu.
+            Jawaban tidak akan ditampilkan sebelum tombol ditekan.
+        </p>
+
+    </div>
+
+
+    <div class="quiz">
+
+        <div class="quizCard">
+
+            <div class="progress">
+                <div class="progressBar" id="progressBar"></div>
+            </div>
+
+
+            <div class="quizTop">
+
+                <span id="questionCounter">
+                    1 / 41
+                </span>
+
+                <span>
+                    Hafal:
+                    <b id="scoreText">0</b>
+                </span>
+
+            </div>
+
+
+            <div class="questionArea">
+
+                <div class="questionNumber">
+                    TEBAK DAHULU
+                </div>
+
+                <div
+                    id="question"
+                    class="question">
+                </div>
+
+                <div
+                    id="questionHint"
+                    class="questionHint">
+                </div>
+
+            </div>
+
+
+            <!-- JAWABAN TERSEMBUNYI -->
+
+            <div
+                id="answerArea"
+                class="answerArea">
+
+                <div class="answerLabel">
+                    JAWABAN YANG BENAR
+                </div>
+
+                <div
+                    id="answerArabic"
+                    class="answerArabic">
+                </div>
+
+                <div
+                    id="answerIndo"
+                    class="answerIndo">
+                </div>
+
+
+                <div class="example">
+
+                    <div
+                        id="exampleArabic"
+                        class="exampleArabic">
+                    </div>
+
+                    <div
+                        id="exampleIndo"
+                        class="exampleIndo">
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO GALIH -->
+
+                <div
+                    id="reaction"
+                    class="reaction">
+
+                    <img
+                        src="galih.jpg"
+                        alt="Reaksi Galih">
+
+                    <div
+                        id="reactionText"
+                        class="reactionText">
+                        Jawabannya dibuka 🤣
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOMBOL LIHAT JAWABAN -->
+
+            <button
+                id="revealButton"
+                class="btn btnGold">
+
+                👁️ Lihat Jawaban
+
+            </button>
+
+
+            <!-- BENAR / SALAH -->
+
+            <div
+                id="evaluation"
+                style="display:none;">
+
+                <div class="buttonRow">
+
+                    <button
+                        id="wrongButton"
+                        class="btn btnRed">
+
+                        ❌ Salah / Belum Hafal
+
+                    </button>
+
+                    <button
+                        id="correctButton"
+                        class="btn btnGreen">
+
+                        ✅ Benar / Hafal
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="buttonRow">
+
+                <button
+                    id="previousButton"
+                    class="btn btnDark">
+
+                    ← Sebelumnya
+
+                </button>
+
+                <button
+                    id="nextButton"
+                    class="btn btnDark">
+
+                    Soal Berikutnya →
+
+                </button>
+
+            </div>
+
+
+            <button
+                id="resetButton"
+                class="btn btnDark"
+                style="font-size:10px;color:#777780;">
+
+                ↻ Reset Progress
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= MUTHOLAAH PAGE ================= -->
+
+<section id="mutholaahPage" class="panel">
+
+    <div class="sectionHead">
+
+        <small>02 — BELAJAR</small>
+
+        <h2>Mutholaah 41</h2>
+
+        <p>
+            Semua 41 uslub lengkap dengan bahasa Arab,
+            contoh, dan arti.
+        </p>
+
+    </div>
+
+
+    <input
+        id="search"
+        class="search"
+        type="text"
+        placeholder="🔎 Cari uslub, arti, atau bahasa Arab...">
+
+
+    <div
+        id="cards"
+        class="cards">
+    </div>
+
+</section>
+
+</main>
+
+
+<div class="footer">
+
+    41 USLUB • <span class="gold">LUXURY ARABIC MEMORIZATION</span>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   DATA 41 USLUB
+========================================================= */
+
+const data = [
+
+{
+id:1,
+indo:"Salah Satunya",
+arab:"أَحَدُهُنَّ",
+example:"هُنَاكَ أَرْبَعُ نِسَاءٍ إِحْدَاهُنَّ مَرْيَمُ.",
+meaning:"Ada 4 wanita, salah satunya Maryam."
+},
+
+{
+id:2,
+indo:"Sama Dengan",
+arab:"يُسَاوِي",
+example:"شَهَادَةُ رَجُلٍ تُسَاوِي شَهَادَةَ امْرَأَتَيْنِ.",
+meaning:"Kesaksian 1 lelaki sama dengan 2 perempuan."
+},
+
+{
+id:3,
+indo:"Sama Sekali",
+arab:"عَلَى الْإِطْلَاقِ",
+example:"فَرِيقُهُمْ لَا يَسْتَحِقُّ الْفَوْزَ عَلَى الْإِطْلَاقِ.",
+meaning:"Tim mereka sama sekali tidak pantas menang."
+},
+
+{
+id:4,
+indo:"Sambil",
+arab:"اِسْم فَاعِل مَنْصُوب",
+example:"قَصَّ قِصَّةَ حَيَاتِهِ بَاكِيًا.",
+meaning:"Dia bercerita sambil menangis."
+},
+
+{
+id:5,
+indo:"Sebaiknya",
+arab:"مِنَ الْمُسْتَحْسَنِ",
+example:"مِنَ الْمُسْتَحْسَنِ أَلَّا نُوَاصِلَ هَذَا الْجِدَالَ.",
+meaning:"Sebaiknya kita tidak meneruskan perdebatan ini."
+},
+
+{
+id:6,
+indo:"Sebelum Ini",
+arab:"قَبْلَ هَذَا",
+example:"سَبَقَ أَنْ جِئْتُ هُنَا قَبْلَ هَذَا.",
+meaning:"Sebelum ini saya pernah kesini."
+},
+
+{
+id:7,
+indo:"Sebelum Itu",
+arab:"قَبْلَ ذَلِكَ",
+example:"يُمْكِنُ أَنْ تُشَارِكَ وَلَكِنْ قَبْلَ ذَلِكَ يَجِبُ أَنْ تُسَجِّلَ أَوَّلًا.",
+meaning:"Boleh ikut, tapi sebelum itu harus daftar dulu."
+},
+
+{
+id:8,
+indo:"Sebelumnya",
+arab:"فِي وَقْتٍ سَابِقٍ",
+example:"فِي وَقْتٍ سَابِقٍ دَرَسْنَا الْعَرَبِيَّةَ.",
+meaning:"Sebelumnya kami belajar Arab."
+},
+
+{
+id:9,
+indo:"Sebenarnya",
+arab:"فِي الْحَقِيقَةِ",
+example:"مَا الَّذِي حَدَثَ فِي الْحَقِيقَةِ؟",
+meaning:"Apa yang sebenarnya terjadi?"
+},
+
+{
+id:10,
+indo:"Sebentar Lagi",
+arab:"اِقْتَرَبَ أَنْ",
+example:"اِقْتَرَبَ الْوَقْتُ أَنْ يَنْتَهِيَ.",
+meaning:"Waktunya sebentar lagi habis."
+},
+
+{
+id:11,
+indo:"Secepatnya",
+arab:"فِي أَسْرَعِ وَقْتٍ مُمْكِنٍ",
+example:"سَأُنْهِي هَذَا الْعَمَلَ فِي أَسْرَعِ وَقْتٍ مُمْكِنٍ.",
+meaning:"Saya akan selesaikan secepatnya."
+},
+
+{
+id:12,
+indo:"Seharusnya",
+arab:"كَانَ يَجِبُ",
+example:"كَانَ يَجِبُ أَلَّا يَكُونَ هُوَ فِي الْمَرْكَزِ الْأَوَّلِ.",
+meaning:"Seharusnya bukan dia juara satu."
+},
+
+{
+id:13,
+indo:"Seharusnya Tidak",
+arab:"مِنَ الْمُفْتَرَضِ أَلَّا",
+example:"مِنَ الْمُفْتَرَضِ أَلَّا تَتَحَمَّلَ هَذَا وَحْدَكَ.",
+meaning:"Seharusnya kamu tidak menanggung ini sendirian."
+},
+
+{
+id:14,
+indo:"Sejak Awal",
+arab:"مُنْذُ الْبِدَايَةِ",
+example:"لِمَاذَا لَمْ تَقُلْ ذَلِكَ مُنْذُ الْبِدَايَةِ؟",
+meaning:"Kenapa tidak bilang sejak awal?"
+},
+
+{
+id:15,
+indo:"Sejak Kapan",
+arab:"مُنْذُ مَتَى",
+example:"مُنْذُ مَتَى سَكَنْتَ فِي هَذِهِ الْمَدِينَةِ؟",
+meaning:"Sejak kapan kamu tinggal di kota ini?"
+},
+
+{
+id:16,
+indo:"Sekali Lagi",
+arab:"مَرَّةً أُخْرَى",
+example:"حَاوِلْ مَرَّةً أُخْرَى.",
+meaning:"Cobalah sekali lagi."
+},
+
+{
+id:17,
+indo:"Selagi",
+arab:"مَا دَامَ",
+example:"لَا تَقْلَقِي مَا دُمْتُ مَعَكِ.",
+meaning:"Jangan cemas selagi aku bersamamu."
+},
+
+{
+id:18,
+indo:"Selain Itu",
+arab:"فَضْلًا عَنْ ذَلِكَ",
+example:"هِيَ جَمِيلَةٌ فَضْلًا عَنْ ذَلِكَ مُتَدَيِّنَةٌ.",
+meaning:"Dia cantik, selain itu taat."
+},
+
+{
+id:19,
+indo:"Selalu",
+arab:"دَائِمًا",
+example:"أَنَا أَشْتَاقُ إِلَيْكَ دَائِمًا.",
+meaning:"Aku selalu rindu kamu."
+},
+
+{
+id:20,
+indo:"Selama",
+arab:"دَامَ",
+example:"اِلْتَقَيْنَا بَعْدَ فِرَاقٍ دَامَ عَشْرَ سَنَوَاتٍ.",
+meaning:"Kami bertemu setelah berpisah selama 10 tahun."
+},
+
+{
+id:21,
+indo:"Selamat Datang",
+arab:"مَرْحَبًا بِـ",
+example:"مَرْحَبًا بِكَ فِي بَيْتِنَا.",
+meaning:"Selamat datang di rumah kami."
+},
+
+{
+id:22,
+indo:"Selamat Tinggal",
+arab:"وَدَاعًا",
+example:"وَدَاعًا يَا صَدِيقِي.",
+meaning:"Selamat tinggal temanku."
+},
+
+{
+id:23,
+indo:"Semakin",
+arab:"آخِذٌ فِي",
+example:"الْجَامِعَةُ آخِذَةٌ فِي التَّقَدُّمِ.",
+meaning:"Kampus ini semakin maju."
+},
+
+{
+id:24,
+indo:"Sengaja",
+arab:"عَنْ قَصْدٍ",
+example:"هَلْ فَعَلْتَ هَذَا عَنْ قَصْدٍ؟",
+meaning:"Apakah kamu sengaja melakukannya?"
+},
+
+{
+id:25,
+indo:"Seperti Biasa",
+arab:"كَمَا جَرَتِ الْعَادَةُ",
+example:"كَمَا جَرَتِ الْعَادَةُ يَتَبَادَلُونَ الزِّيَارَةَ يَوْمَ الْعِيدِ.",
+meaning:"Seperti biasa mereka saling berkunjung di hari raya."
+},
+
+{
+id:26,
+indo:"Seperti Ini",
+arab:"مِثْلُ هَذَا",
+example:"مُشْكِلَةٌ مِثْلُ هَذِهِ لَا يُمْكِنُ حَلُّهَا.",
+meaning:"Masalah seperti ini tidak mungkin selesai cepat."
+},
+
+{
+id:27,
+indo:"Sepertinya",
+arab:"يَبْدُو أَنَّ",
+example:"يَبْدُو أَنَّهُمَا لَمْ يَعُودَا يَتَحَابَّا.",
+meaning:"Sepertinya mereka tidak saling mencintai lagi."
+},
+
+{
+id:28,
+indo:"Sepertinya Iya",
+arab:"كَأَنَّهُ هُوَ",
+example:"هَلْ هَذِهِ سَيَّارَةُ أُسْتَاذِنَا؟ كَأَنَّهَا هِيَ.",
+meaning:"Apakah ini mobil ustadz? Sepertinya iya."
+},
+
+{
+id:29,
+indo:"Sering",
+arab:"كَثِيرًا",
+example:"نَزَلَ الْمَطَرُ كَثِيرًا هَذِهِ الْأَيَّامَ.",
+meaning:"Hari-hari ini sering hujan."
+},
+
+{
+id:30,
+indo:"Sesuai",
+arab:"حَسَبَ",
+example:"كُلٌّ يَعْمَلُ حَسَبَ قُدْرَتِهِ.",
+meaning:"Tiap orang bekerja sesuai kemampuannya."
+},
+
+{
+id:31,
+indo:"Sesuka Hati",
+arab:"كَمَا شَاءَ",
+example:"اُكْتُبْ كَمَا شِئْتَ.",
+meaning:"Tulislah sesuka hatimu."
+},
+
+{
+id:32,
+indo:"Setelah Ini",
+arab:"بَعْدَ الْآنَ",
+example:"بَعْدَ الْآنَ سَأَتَفَرَّغُ لِحِفْظِ الْقُرْآنِ.",
+meaning:"Setelah ini saya akan fokus hafal Qur'an."
+},
+
+{
+id:33,
+indo:"Setelah Itu",
+arab:"بَعْدَ ذَلِكَ",
+example:"وَمَاذَا بَعْدَ ذَلِكَ؟",
+meaning:"Lalu apa setelah itu?"
+},
+
+{
+id:34,
+indo:"Setuju / Sepakat",
+arab:"اِتَّفَقْنَا عَلَى",
+example:"اِتَّفَقْنَا جَمِيعًا عَلَى أَنَّ تَعَلُّمَ الْعَرَبِيَّةِ وَاجِبٌ.",
+meaning:"Kita semua sepakat belajar Arab itu wajib."
+},
+
+{
+id:35,
+indo:"Siap",
+arab:"حَاضِرٌ",
+example:"لَا تَتَأَخَّرْ مَرَّةً أُخْرَى! حَاضِرٌ.",
+meaning:"Jangan terlambat lagi! Siap."
+},
+
+{
+id:36,
+indo:"Siapa Lagi",
+arab:"مَنْ أَيْضًا",
+example:"مَنْ أَيْضًا الَّذِي لَا يَسْتَطِيعُ الْحُضُورَ غَدًا؟",
+meaning:"Siapa lagi yang tidak bisa hadir besok?"
+},
+
+{
+id:37,
+indo:"Siapapun",
+arab:"أَيًّا كَانَ",
+example:"أَيًّا كَانَ مُشْرِفُكَ عَلَيْكَ اِحْتِرَامُهُ.",
+meaning:"Siapapun pembimbingmu, kamu harus hormati."
+},
+
+{
+id:38,
+indo:"Siapa Tahu",
+arab:"مَنْ يَدْرِي",
+example:"مَنْ يَدْرِي رُبَّمَا هُوَ فِي بَيْتِهِ.",
+meaning:"Siapa tahu dia ada di rumahnya."
+},
+
+{
+id:39,
+indo:"Suatu Hari / Saat",
+arab:"يَوْمًا مَا",
+example:"سَيَنْدَمُ يَوْمًا مَا.",
+meaning:"Suatu hari dia akan menyesal."
+},
+
+{
+id:40,
+indo:"Sudah Tentu",
+arab:"طَبْعًا",
+example:"هَذَا الْفِرَاقُ طَبْعًا يُحْزِنُنَا جَمِيعًا.",
+meaning:"Perpisahan ini sudah tentu membuat kita sedih."
+},
+
+{
+id:41,
+indo:"Sudah Waktunya",
+arab:"حَانَ الْوَقْتُ",
+example:"حَانَ الْوَقْتُ لِتَتَزَوَّجَ وَتَعِيشَ مُسْتَقِلًّا.",
+meaning:"Sudah waktunya kamu menikah dan hidup mandiri."
+}
+
+];
+
+
+/* =========================================================
+   STORAGE / PROGRESS
+========================================================= */
+
+let hafal = Number(localStorage.getItem("uslub_hafal") || 0);
+let salah = Number(localStorage.getItem("uslub_salah") || 0);
+
+let order = [...data];
+let current = 0;
+let revealed = false;
+
+
+/* =========================================================
+   ELEMENT
+========================================================= */
+
+const question =
+    document.getElementById("question");
+
+const questionHint =
+    document.getElementById("questionHint");
+
+const answerArea =
+    document.getElementById("answerArea");
+
+const answerArabic =
+    document.getElementById("answerArabic");
+
+const answerIndo =
+    document.getElementById("answerIndo");
+
+const exampleArabic =
+    document.getElementById("exampleArabic");
+
+const exampleIndo =
+    document.getElementById("exampleIndo");
+
+const revealButton =
+    document.getElementById("revealButton");
+
+const evaluation =
+    document.getElementById("evaluation");
+
+const reaction =
+    document.getElementById("reaction");
+
+const reactionText =
+    document.getElementById("reactionText");
+
+const progressBar =
+    document.getElementById("progressBar");
+
+const questionCounter =
+    document.getElementById("questionCounter");
+
+const scoreText =
+    document.getElementById("scoreText");
+
+const hafalStat =
+    document.getElementById("hafalStat");
+
+const salahStat =
+    document.getElementById("salahStat");
+
+
+/* =========================================================
+   SAVE
+========================================================= */
+
+function saveProgress(){
+
+    localStorage.setItem(
+        "uslub_hafal",
+        hafal
+    );
+
+    localStorage.setItem(
+        "uslub_salah",
+        salah
+    );
+
+}
+
+
+/* =========================================================
+   UPDATE STATS
+========================================================= */
+
+function updateStats(){
+
+    hafalStat.textContent = hafal;
+
+    salahStat.textContent = salah;
+
+    scoreText.textContent = hafal;
+
+}
+
+
+/* =========================================================
+   RENDER QUESTION
+========================================================= */
+
+function renderQuestion(){
+
+    const item = order[current];
+
+    revealed = false;
+
+    question.textContent = item.indo;
+
+    question.className = "question";
+
+    questionHint.textContent =
+        "Apa bahasa Arabnya?";
+
+    answerArea.classList.remove("show");
+
+    evaluation.style.display = "none";
+
+    revealButton.style.display = "block";
+
+    reaction.classList.remove("show");
+
+    progressBar.style.width =
+        ((current) / order.length * 100) + "%";
+
+    questionCounter.textContent =
+        (current + 1) + " / " + order.length;
+
+    updateStats();
+
+}
+
+
+/* =========================================================
+   REVEAL ANSWER
+========================================================= */
+
+revealButton.addEventListener("click",function(){
+
+    const item = order[current];
+
+    revealed = true;
+
+    answerArabic.textContent =
+        item.arab;
+
+    answerIndo.textContent =
+        item.indo;
+
+    exampleArabic.textContent =
+        item.example;
+
+    exampleIndo.textContent =
+        item.meaning;
+
+    answerArea.classList.add("show");
+
+    evaluation.style.display = "block";
+
+    revealButton.style.display = "none";
+
+    /*
+       FOTO GALIH MUNCUL KETIKA JAWABAN DIBUKA.
+       Ukurannya hanya 105px agar tidak memenuhi layar.
+    */
+
+    reaction.classList.add("show");
+
+    reactionText.textContent =
+        "Jawabannya dibuka 🤣";
+
+});
+
+
+/* =========================================================
+   BENAR
+========================================================= */
+
+document
+.getElementById("correctButton")
+.addEventListener("click",function(){
+
+    if(!revealed) return;
+
+    hafal++;
+
+    saveProgress();
+
+    nextQuestion();
+
+});
+
+
+/* =========================================================
+   SALAH
+========================================================= */
+
+document
+.getElementById("wrongButton")
+.addEventListener("click",function(){
+
+    if(!revealed) return;
+
+    salah++;
+
+    saveProgress();
+
+    reaction.classList.add("show");
+
+    reactionText.textContent =
+        "Waduh, belum hafal 🤣";
+
+    setTimeout(function(){
+
+        nextQuestion();
+
+    },800);
+
+});
+
+
+/* =========================================================
+   NEXT
+========================================================= */
+
+function nextQuestion(){
+
+    current++;
+
+    if(current >= order.length){
+
+        current = 0;
+
+        order =
+            [...data]
+            .sort(
+                () => Math.random() - .5
+            );
+
+    }
+
+    renderQuestion();
+
+}
+
+
+/* =========================================================
+   NEXT BUTTON
+========================================================= */
+
+document
+.getElementById("nextButton")
+.addEventListener("click",function(){
+
+    nextQuestion();
+
+});
+
+
+/* =========================================================
+   PREVIOUS
+========================================================= */
+
+document
+.getElementById("previousButton")
+.addEventListener("click",function(){
+
+    current--;
+
+    if(current < 0){
+
+        current =
+            order.length - 1;
+
+    }
+
+    renderQuestion();
+
+});
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+document
+.getElementById("resetButton")
+.addEventListener("click",function(){
+
+    const yakin =
+        confirm(
+            "Yakin ingin mereset semua progress hafalan?"
+        );
+
+    if(!yakin) return;
+
+    hafal = 0;
+
+    salah = 0;
+
+    saveProgress();
+
+    renderQuestion();
+
+});
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+document
+.querySelectorAll(".nav button")
+.forEach(function(button){
+
+    button.addEventListener("click",function(){
+
+        document
+        .querySelectorAll(".nav button")
+        .forEach(function(btn){
+
+            btn.classList.remove("active");
+
+        });
+
+        button.classList.add("active");
+
+        const page =
+            button.dataset.page;
+
+        document
+        .querySelectorAll(".panel")
+        .forEach(function(panel){
+
+            panel.classList.remove("active");
+
+        });
+
+        document
+        .getElementById(page)
+        .classList.add("active");
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    });
+
+});
+
+
+/* =========================================================
+   MUTHOLAAH
+========================================================= */
+
+const cards =
+    document.getElementById("cards");
+
+
+function renderCards(list){
+
+    cards.innerHTML = "";
+
+    list.forEach(function(item){
+
+        const card =
+            document.createElement("article");
+
+        card.className = "card";
+
+        card.innerHTML = `
+
+            <div class="cardHead">
+
+                <span class="number">
+                    #${String(item.id).padStart(2,"0")}
+                </span>
+
+                <span class="cardTitle">
+                    ${item.indo}
+                </span>
+
+            </div>
+
+            <div class="cardArabic">
+                ${item.arab}
+            </div>
+
+            <div class="cardExample">
+
+                <div class="cardExampleArabic">
+                    ${item.example}
+                </div>
+
+                <div class="cardExampleIndo">
+                    ${item.meaning}
+                </div>
+
+            </div>
+
+        `;
+
+        cards.appendChild(card);
+
+    });
+
+}
+
+
+renderCards(data);
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+document
+.getElementById("search")
+.addEventListener("input",function(){
+
+    const keyword =
+        this.value
+        .toLowerCase()
+        .trim();
+
+    const filtered =
+        data.filter(function(item){
+
+            return (
+
+                item.indo
+                .toLowerCase()
+                .includes(keyword)
+
+                ||
+
+                item.arab
+                .toLowerCase()
+                .includes(keyword)
+
+                ||
+
+                item.example
+                .toLowerCase()
+                .includes(keyword)
+
+                ||
+
+                item.meaning
+                .toLowerCase()
+                .includes(keyword)
+
+            );
+
+        });
+
+    renderCards(filtered);
+
+});
+
+
+/* =========================================================
+   PREVIEW HERO
+========================================================= */
+
+const preview =
+    document.getElementById("preview");
+
+preview.innerHTML =
+    data
+    .slice(0,4)
+    .map(function(item){
+
+        return `
+
+            <div class="previewItem">
+
+                <div class="arab">
+                    ${item.arab}
+                </div>
+
+                <div class="indo">
+                    ${item.indo}
+                </div>
+
+            </div>
+
+        `;
+
+    })
+    .join("");
+
+
+/* =========================================================
+   START
+========================================================= */
+
+order =
+    [...data]
+    .sort(
+        () => Math.random() - .5
+    );
+
+renderQuestion();
+
+</script>
+
+</body>
+</html>
